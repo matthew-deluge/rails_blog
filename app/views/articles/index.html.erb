@@ -1,13 +1,30 @@
-<h1>Articles</h1>
+<div class="header">
+  <h1>Rails Blog</h1>
+    <h3>
+    Our blog has <%= Article.public_count %> articles and counting!
+    </h3>
+</div>
 
-Our blog has <%= Article.public_count %> articles and counting!
+<div class="body">
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
-  <% end %>
-</ul>
+  <h2 class="article_list_title">
+  Article List:
+  </h2>
 
-<%= link_to 'New Article', new_article_path %>
+  <div class= "Article_List">
+  <ul>
+    <% @articles.each do |article| %>
+      <div class='article_box'>
+        <div class="article_title_box">
+          <%= link_to article.title, article %>
+        </div>
+        <div class="article_body_box">
+          <%= "#{article.body}" %>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+  </div>
+
+  <%= link_to 'Create a New Article', new_article_path %>
+  </div>
