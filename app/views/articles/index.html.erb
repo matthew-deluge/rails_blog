@@ -6,10 +6,12 @@
 </div>
 
 <div class="body">
-
-  <h2 class="article_list_title">
-  Article List:
-  </h2>
+  <div class = "title_box">
+    <div class="button"> <%= link_to 'Create Article', new_article_path %></div>
+    <h2 class="article_list_title">
+      Article List:
+    </h2>
+  </div>
 
   <div class= "Article_List">
   <ul>
@@ -24,7 +26,4 @@
       </div>
     <% end %>
   </ul>
-  </div>
-
-  <%= link_to 'Create a New Article', new_article_path %>
-  </div>
+  
